@@ -1337,7 +1337,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Title
+  m_text: ZLG QUIZ
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8506df2208bee4d40b3aed146987dc22, type: 2}
   m_sharedMaterial: {fileID: -1053522194741263136, guid: 8506df2208bee4d40b3aed146987dc22, type: 2}

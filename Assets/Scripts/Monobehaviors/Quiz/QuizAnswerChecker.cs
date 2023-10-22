@@ -10,6 +10,11 @@ public class QuizAnswerChecker : MonoBehaviour
 
     [Header("References")]
     [SerializeField] QuizQuestionReference _currentQuestion;
+    [SerializeField] SoundManager _soundManager;
+
+    [Header("Variables")]
+    [SerializeField] AudioClip _correctSFX;
+    [SerializeField] AudioClip _wrongSFX;
 
     QuizAnswer _correctAnswer;
     QuizAnswer _selectedAnswer;
@@ -38,9 +43,11 @@ public class QuizAnswerChecker : MonoBehaviour
     {
         if (_selectedAnswer == _correctAnswer)
         {
+            _soundManager.PlaySFX(_correctSFX);
             _answerCorrect.Raise();
         } else
         {
+            _soundManager.PlaySFX(_wrongSFX);
             _answerWrong.Raise();
         }
     }

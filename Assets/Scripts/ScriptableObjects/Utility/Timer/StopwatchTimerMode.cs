@@ -9,7 +9,6 @@ public class StopwatchTimerMode : TimerMode
     {
         float time = p_time;
         time += Time.deltaTime;
-        Debug.Log(time);
         return time;
     }
 }
