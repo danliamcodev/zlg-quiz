@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1c3fe1147dc3514ea6613d5ae2ff46c, type: 3}
+  m_Name: Science 1
+  m_EditorClassIdentifier: 
+  _randimizeQuestions: 1
+  _questions:
+  - _question: What is the Earth mostly made of?
+    _randomizeAnswers: 1
+    _answers:
+    - _answer: Water
+      _isCorrect: 0
+    - _answer: Rocks
+      _isCorrect: 1
+    - _answer: Clouds
+      _isCorrect: 0
+    - _answer: Sand
+      _isCorrect: 0
+  - _question: 'Which of the following is a source of light? '
+    _randomizeAnswers: 1
+    _answers:
+    - _answer: A chair
+      _isCorrect: 0
+    - _answer: The Sun
+      _isCorrect: 1
+    - _answer: A book
+      _isCorrect: 0
+    - _answer: A pencil
+      _isCorrect: 0
+  - _question: 'Which planet is known as the "Red Planet"? '
+    _randomizeAnswers: 1
+    _answers:
+    - _answer: Venus
+      _isCorrect: 0
+    - _answer: Earth
+      _isCorrect: 0
+    - _answer: Mars
+      _isCorrect: 1
+    - _answer: Jupiter
+      _isCorrect: 0
+  - _question: 'What do plants need to make their own food? '
+    _randomizeAnswers: 1
+    _answers:
+    - _answer: Air and water
+      _isCorrect: 0
+    - _answer: Sunlight and water
+      _isCorrect: 1
+    - _answer: Soil and rocks
+      _isCorrect: 0
+  - _question: 'What is the process of a caterpillar turning into a butterfly called? '
+    _randomizeAnswers: 1
+    _answers:
+    - _answer: Metamorphosis
+      _isCorrect: 1
+    - _answer: Migration
+      _isCorrect: 0
+    - _answer: Hibernation
+      _isCorrect: 0
