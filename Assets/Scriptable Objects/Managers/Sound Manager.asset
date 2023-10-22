@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a50a613d08c9b85469fe0bbf0560c035, type: 3}
   m_Name: Sound Manager
   m_EditorClassIdentifier: 
-  _buttonClickSFX: {fileID: 8300000, guid: 82a422e06cac6fb41985262fb852c1ef, type: 3}
+  _buttonClickSFX: {fileID: 8300000, guid: 3e4617937d49cd04788d8705f289fa0c, type: 3}
   _masterVolume: {fileID: 11400000, guid: a52f2f2154e6fc044b7f3a85ce34794b, type: 2}
   _sfxVolume: {fileID: 11400000, guid: f67dfa33ee9a33c48bf25b8c5c6eee6a, type: 2}
   _bgmVolume: {fileID: 11400000, guid: 6ed91804606a78e43bd531c2b237489b, type: 2}
