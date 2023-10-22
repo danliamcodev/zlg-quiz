@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1c3fe1147dc3514ea6613d5ae2ff46c, type: 3}
   m_Name: Science 1
   m_EditorClassIdentifier: 
+  _randimizeQuestions: 1
   _questions:
   - _question: What is the Earth mostly made of?
+    _randomizeAnswers: 1
     _answers:
     - _answer: Water
       _isCorrect: 0
@@ -24,6 +26,7 @@ MonoBehaviour:
     - _answer: Sand
       _isCorrect: 0
   - _question: 'Which of the following is a source of light? '
+    _randomizeAnswers: 1
     _answers:
     - _answer: A chair
       _isCorrect: 0
@@ -34,6 +37,7 @@ MonoBehaviour:
     - _answer: A pencil
       _isCorrect: 0
   - _question: 'Which planet is known as the "Red Planet"? '
+    _randomizeAnswers: 1
     _answers:
     - _answer: Venus
       _isCorrect: 0
@@ -44,6 +48,7 @@ MonoBehaviour:
     - _answer: Jupiter
       _isCorrect: 0
   - _question: 'What do plants need to make their own food? '
+    _randomizeAnswers: 1
     _answers:
     - _answer: Air and water
       _isCorrect: 0
@@ -52,6 +57,7 @@ MonoBehaviour:
     - _answer: Soil and rocks
       _isCorrect: 0
   - _question: 'What is the process of a caterpillar turning into a butterfly called? '
+    _randomizeAnswers: 1
     _answers:
     - _answer: Metamorphosis
       _isCorrect: 1

@@ -6,8 +6,10 @@ using UnityEngine;
 public class QuizData : ScriptableObject
 {
     [Header("Variables")]
+    [SerializeField] bool _randimizeQuestions;
     [SerializeField] List<QuizQuestion> _questions;
 
+    public bool randomizeQuestions { get { return _randimizeQuestions; } }
     public List<QuizQuestion> questions { get { return _questions; } }
 
     public void SetQuizQuestions(List<QuizQuestion> p_quizQuestions)

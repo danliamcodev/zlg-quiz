@@ -7,7 +7,7 @@ using TMPro;
 public class QuizAnswerButtonUI : MonoBehaviour
 {
     [Header("Events")]
-    [SerializeField] QuizAnswerButtonUIEvent _buttonSelected;
+    [SerializeField] QuizAnswerEvent _quizAnswerSelected;
 
     [Header("References")]
     [SerializeField] Image _buttonImage;
@@ -18,13 +18,13 @@ public class QuizAnswerButtonUI : MonoBehaviour
     [SerializeField] Color _correctColor;
     [SerializeField] Color _wrongColor;
 
-    private bool _isCorrect;
+    private QuizAnswer _quizAnswer;
     private bool _isSelected;
 
     public void ConfigureButton (QuizAnswer p_answer)
     {
+        _quizAnswer = p_answer;
         _buttonText.text = p_answer.answer;
-        _isCorrect = p_answer.isCorrect;
     }
 
     public void OnAnswerButtonSelected(QuizAnswerButtonUI p_answerButton)
@@ -32,28 +32,33 @@ public class QuizAnswerButtonUI : MonoBehaviour
         if (p_answerButton == this)
         {
             _buttonImage.color = _selectedColor;
+            _quizAnswerSelected.Raise(_quizAnswer);
             _isSelected = true;
         } else
         {
-            _buttonImage.color = Color.white;
-            _isSelected = false;
+            ResetAnswerButton();            
         }
     }
 
     public void OnAnswerSubmitted()
     {
-        if (_isCorrect) OnAnswerCorrect();
-        if (_isSelected && !_isCorrect) OnAnswerWrong();
+        if (_quizAnswer.isCorrect) DisplayCorrectAnswer();
+        else if (_isSelected && !_quizAnswer.isCorrect) DisplayWrongAnswer();
     }
 
-    private void OnAnswerWrong()
+    private void DisplayWrongAnswer()
     {
         _buttonImage.color = _wrongColor;
     }
 
-    private void OnAnswerCorrect()
+    private void DisplayCorrectAnswer()
     {
         _buttonImage.color = _correctColor;
-        //if (_isSelected) ;
+    }
+
+    public void ResetAnswerButton()
+    {
+        _buttonImage.color = Color.white;
+        _isSelected = false;
     }
 }
