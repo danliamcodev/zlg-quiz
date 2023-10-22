@@ -1,6 +1,4 @@
 using UnityEngine;
-using UnityEditor;
-using System.IO;
 using System.Collections.Generic;
 
 public class QuizDataLoader : MonoBehaviour
@@ -9,7 +7,6 @@ public class QuizDataLoader : MonoBehaviour
     [SerializeField] VoidEvent _quizDataLoaded;
 
     [Header("References")]
-    [SerializeField] DefaultAsset _quizDataFolder;
     [SerializeField] QuizData _defaultQuizData;
     [SerializeField] QuizData _currentQuizData;
     [SerializeField] Shuffler _shuffler;
@@ -27,22 +24,12 @@ public class QuizDataLoader : MonoBehaviour
     {
         _quizDataList = new List<QuizData>();
 
-        if (_quizDataFolder == null)
-        {
-            Debug.LogWarning("Please assign a folder.");
-            return;
-        }
+        // Load all QuizData assets from the "Resources" folder
+        QuizData[] quizDataAssets = Resources.LoadAll<QuizData>("");
 
-        string quizDataFolderPath = AssetDatabase.GetAssetPath(_quizDataFolder);
-        string[] quizDataPaths = Directory.GetFiles(quizDataFolderPath, "*.asset");
-
-        foreach (string path in quizDataPaths)
+        foreach (QuizData quizDataAsset in quizDataAssets)
         {
-            QuizData scriptableObject = (QuizData)AssetDatabase.LoadAssetAtPath(path, typeof(QuizData));
-            if (scriptableObject != null)
-            {
-                _quizDataList.Add(scriptableObject);
-            }
+            _quizDataList.Add(quizDataAsset);
         }
 
         QuizData quizData = GetRandomQuizData();
